@@ -1,0 +1,56 @@
+@baseColor: black;
+@accentColor: lightgrey;
+@textSize: 10px;
+@titleSize: 20px;
+@baseColor1: yellow;
+@baseColor2: orange;
+
+.no-padding-margin {
+  margin: 0;
+  padding: 0;
+}
+
+.base-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accent {
+  background-color: @accentColor;
+}
+
+body{
+  .accent();
+}
+
+.form-container {
+  .base-flex();
+  flex-direction: column;
+  height: 25vh;
+  border: 2px solid black;
+  input[type="text"]{
+    border: 2px solid blue;
+    .no-padding-margin();
+  }
+  input[type="submit"]{
+    width: 130px;
+    .no-padding-margin();
+  }
+}
+
+.game-container {
+  .choice-container{
+    border: 2px solid @baseColor1;
+    .base-flex();
+    justify-content: space-around;
+  }
+  .result-container {
+  }
+}
+
+.player-history-container {
+  .base-flex();
+  height: 35vh;
+  border: 2px solid @baseColor2;
+}
